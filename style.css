@@ -25,14 +25,13 @@
 nav {
   position: fixed;
   width: 1920px;
-  background: rgba(0, 0, 0, 0.1);
-  border: 0.1 solid rgba(0, 0, 0, 0);
-  padding: 0 0 30px;
 }
 
 nav a {
   text-decoration: none;
   color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 nav #box {
@@ -85,7 +84,6 @@ nav #box #social a:nth-child(2) {
   width: 1920px;
   background-image: url(./img/paper.png);
   border: 0.1px solid rgba(0, 0, 0, 0);
-  padding: 0 0 100px;
 }
 
 #contant h1 {
@@ -135,6 +133,42 @@ nav #box #social a:nth-child(2) {
   line-height: 1.88;
   letter-spacing: 4.8px;
   margin: 28px 0 31px;
+}
+
+#contant #news div hr {
+  border: 0.5 solid #252525;
+  width: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#contant #news div div {
+  position: relative;
+  font-size: 0;
+}
+
+#contant #news div div::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#contant #news div img {
+  width: 100%;
+}
+
+#contant #news div:hover hr {
+  width: 100%;
+}
+
+#contant #news div:hover div::before {
+  opacity: 0.5;
 }
 
 #contant #product {
