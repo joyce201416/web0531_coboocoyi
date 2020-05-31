@@ -1,7 +1,7 @@
-$green:#49aa45
-$gray333:#333333
+$green:#49aa45;
+$gray333:#333333;
 
-* {
+  * {
     margin: 0;
     padding: 0;
     font-family: 微軟正黑體;
@@ -13,7 +13,7 @@ $gray333:#333333
     width: 1920px;
     height: 1280px;
     // 格線會將子元素改為區塊元素
-    display: grid ;
+    display: grid;
     align-items: center;
 
 
@@ -24,18 +24,19 @@ $gray333:#333333
     }
 
 }
+
 // 導覽列
 nav {
     // 固定
     position: fixed;
     width: 1920px;
 
-    a{
+    a {
         text-decoration: none;
-                color: white;
+        color: white;
     }
 
-    
+
     // 導覽列內的盒子
     #box {
         margin: 50px auto 0;
@@ -45,33 +46,33 @@ nav {
 
         #link {
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(3, 1fr);
             align-items: flex-end;
 
             a {
                 font-size: 18px;
                 font-weight: 100;
-        
-                &:nth-child(2) (
-                    text-align: center;
-                )
-        
+
+                &:nth-child(2) {text-align: center;
+
+                }
+                
                 &:nth-child(3) {
                     text-align: right;
                 }
-        
+
             }
         }
 
         #social {
             display: grid;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
             align-items: flex-end;
 
             a:nth-child(2) {
                 text-align: right;
             }
-        
+
         }
     }
 }
@@ -79,25 +80,54 @@ nav {
 // 內容區域
 #contant {
     width: 1920px;
-    background-image: url(./img/paper.png));
-    border:0.1px solid rgba(0,0,0,0);
+    background-image: url(./img/paper.png);
+    border: 0.1px solid rgba(0, 0, 0, 0);
 
     h1 {
         text-align: center;
         margin-top: 46px;
         font-weight: 300;
-        margin-bottom: 600px;
+        margin-bottom: 60px;
         letter-spacing: 9.6px;
         font-size: 32px;
-    
+
     }
 
     #news {
         width: 1200px;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
+
+        div {
+
+            h3 {
+                color: #49aa45;
+                font-size: 12px;
+                font-weight: 300;
+                letter-spacing: 3.6px;
+                text-align: center;
+                margin-bottom: 27px;
+            }
+
+            h4 {
+                font-size: 22px;
+                font-weight: bold;
+                letter-spacing: 5.5px;
+                text-align: center;
+              }
+
+              p {
+                color: #333333;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 1.88;
+                letter-spacing: 4.8px;
+                margin: 28px 0 31px;
+              }
+              
+
+        }
     }
 }
-
