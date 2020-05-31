@@ -1,3 +1,6 @@
+$green:#49aa45
+$gray333:#333333
+
 * {
     margin: 0;
     padding: 0;
@@ -9,13 +12,29 @@
     background-image: url(./img/banner.png);
     width: 1920px;
     height: 1280px;
+    // 格線會將子元素改為區塊元素
+    display: grid ;
+    align-items: center;
+
+
+    // 行內元素
+    img {
+        // 區塊才可以使用
+        margin: 0 auto;
+    }
+
 }
 // 導覽列
 nav {
     // 固定
     position: fixed;
     width: 1920px;
-    
+
+    a{
+        text-decoration: none;
+                color: white;
+    }
+
     
     // 導覽列內的盒子
     #box {
@@ -23,5 +42,62 @@ nav {
         width: 1200px;
         display: grid;
         grid-template-columns: 204px 351px 398px 120px 110px;
+
+        #link {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            align-items: flex-end;
+
+            a {
+                font-size: 18px;
+                font-weight: 100;
+        
+                &:nth-child(2) (
+                    text-align: center;
+                )
+        
+                &:nth-child(3) {
+                    text-align: right;
+                }
+        
+            }
+        }
+
+        #social {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            align-items: flex-end;
+
+            a:nth-child(2) {
+                text-align: right;
+            }
+        
+        }
     }
 }
+
+// 內容區域
+#contant {
+    width: 1920px;
+    background-image: url(./img/paper.png));
+    border:0.1px solid rgba(0,0,0,0);
+
+    h1 {
+        text-align: center;
+        margin-top: 46px;
+        font-weight: 300;
+        margin-bottom: 600px;
+        letter-spacing: 9.6px;
+        font-size: 32px;
+    
+    }
+
+    #news {
+        width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 20px;
+    }
+}
+
